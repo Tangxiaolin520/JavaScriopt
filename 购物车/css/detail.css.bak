@@ -1,0 +1,368 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*商品详情*/
+#nav{
+	width: 985px;      /*内容固定宽度*/
+	margin: 0px auto;  /*固定宽度且居中*/
+}
+#middle #allnav {
+	width: 100%;    /*自适应宽度，占据整个屏幕*/
+	height: 39px;
+	background-color: #ff7701;
+}
+/*中间导航*/
+#middle #nav {
+	height: 39px;
+}
+#nav ul li {
+	float: left;
+}
+#nav ul li a {
+	float: left;  /*兼容ie6*/
+	padding: 0px 16px;
+	height: 39px;
+	line-height: 39px;
+	display: block;
+	font-weight: bold;
+	font-size: 15px;
+	color: white;
+}
+#nav ul li a:hover {
+	background-color: #ff8c00
+}
+#nav ul li a.category {
+	background-image: url(../images/arrow-down.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+/*导航菜单的二级菜单用到定位*/
+#nav ul li.menuList {
+	position: relative;
+}
+#nav ul li.menuList ul {
+	background-color: #ff7701;
+	text-align: center;
+	top: 39px;  /*脱离原文档流*/
+	left: 0px;
+	position: absolute;
+	width: 129px;
+	display:none;
+}
+#nav ul li.menuList:hover ul{
+display:block;
+	
+}
+#nav ul li ul li {
+	float: none;
+}
+#nav ul li ul li a {
+	float: none
+}
+
+
+/*中间的内容页分左右两部分，左边是商品详细部分，右边是侧边栏*/
+#middle #content{
+	   width:985px;
+	   margin:0px auto;
+}
+/*左边是商品详细*/
+#content #detail {
+	width: 735px;
+	float: left;
+	
+	/* height:500px;*/          
+}
+/*侧边栏*/
+#content #side {
+	width: 240px;
+	float: right;
+	/*height: 500px;*/
+	/*border: 1px solid #6F9;*/
+}
+/*第一个详细栏目*/
+#detail #intro1{
+	border:1px solid #ccc;
+	overflow:hidden; /*父元素的高度发生浮动塌陷*/
+}
+/*第一个详细栏目的标题*/
+#intro1 h2{
+	     
+		 height:40px;
+		 line-height:40px;
+		 border-bottom:1px dashed #ccc;
+		 text-align:center;
+		
+}
+
+#intro1 ul{
+	  float:left;
+	  padding:15px;
+}
+/*详细内容中控制图片的ul*/
+#intro1 ul.picture{
+	width:360px;
+	
+}
+#intro1 ul.picture li{
+	float:left
+}
+/*显示商品小图片的li*/
+#intro1 ul.picture li.ps{
+	margin-right:10px;
+}
+/*第一个详细栏目的信息介绍*/
+#intro1 ul.info li{
+	height:25px;
+	line-height:25px;
+}
+#intro1 ul.info li.buy{
+	height:40px;
+	margin-top:10px;
+}
+#intro1 ul.info li.txt{
+	height:50px;
+	border:1px solid #d0d1a7;
+	background-color:#feffed;
+	padding:10px;
+}
+#intro1 ul.info li span{
+	font:bold 16px Verdana, Geneva, sans-serif;
+	color:orange;
+}
+/*详细介绍的第二个栏目*/
+#detail #intro2{
+	margin-top:10px;  /*与上个详细栏目的垂直间隔*/
+	border:1px solid #dedede;
+	overflow:hidden; /*解决浮动塌陷*/
+}
+/*选项卡标题*/
+.menubox { 
+width:100%; 
+background:url(../images/tabbg.gif); 
+height:28px; 
+
+} 
+
+.menubox li{ 
+float:left; 
+width:114px; 
+text-align:center; 
+color:#949694; 
+font-weight:bold; 
+height:27px; 
+line-height:27px; 
+} 
+
+.menubox li:hover{ 
+padding:0px; 
+
+width:116px; 
+border-left:1px solid #a8c29f; 
+border-top:1px solid #a8c29f; 
+border-right:1px solid #a8c29f; 
+background:url(../images/tabc.gif); 
+
+font-weight:bold; 
+
+} 
+#intro2 .tab{
+	padding:15px;
+}
+#intro2 .tab h2{
+	height:40px;
+	line-height:40px;
+	
+	
+}
+/*第一个选项卡：商家位置*/
+.tab #tab1 dl dt{
+	float:left;
+	margin-right:10px;
+}
+.tab #tab1 dl dd{
+	 height:40px;
+	 overflow:hidden;
+}
+.tab #tab1 dl dd span{
+	font:bold 15px Verdana, Geneva, sans-serif;
+	line-height:40px;
+	color:#F90;
+}
+.tab #tab1 dl dd:hover{
+   height:auto;
+   cursor:pointer;
+}
+/*第二个选项卡：团购详情*/
+.tab #tab2 h2{
+	clear:left;  /*清除dt浮动的影响*/
+}
+ /*团购详情的表格*/
+ #tab2 table{
+	  width:100%;
+	  border:1px solid #dedede;
+	  border-collapse:collapse;
+	  height:200px;
+ }
+ #tab2 table td,#tab2 table th{
+	 border:1px solid #dedede;
+	 text-align:center;
+	 vertical-align:central;
+ }
+ /*表格下的段落*/
+ #tab2 p{
+	 text-align:right;
+	 line-height:30px;
+ }
+ /*表格下的ul*/
+ #tab2 ul{
+	 list-style:circle;
+	 padding-left:15px;
+ }
+ #tab2 ul li{
+	   line-height:30px;
+ }
+ /*购买须知*/
+ #tab2 #buyrule{
+	 border:1px solid #dedede;
+	 padding:15px;
+	 background-color:#fffde8;
+ }
+ #tab2 #buyrule p{
+	  text-align:left;
+ }
+  #tab2 #buyrule p span{
+	  font:bold 14px Verdana, Geneva, sans-serif;
+  }
+  /*第3个选项卡:美团推荐*/
+  #tab3 dl dd{
+	  line-height:25px;
+  }
+  /*第四个选项卡：消费评价*/
+  #tab4 ul li{
+	  border-bottom:1px dashed #dedede;
+	  padding-bottom:10px;
+	  margin-bottom:15px;
+  }
+  /*评价的分页*/
+  #tab4 p{
+	   padding-left:250px;
+  }
+  #tab4 p a{
+	  display:block;
+	  float:left;
+	  width:20px;
+	  height:20px;
+	  line-height:20px;
+	  text-align:center;
+	  margin-right:10px;
+	  border:1px solid #dedede;
+
+  }
+/*侧边栏每个专题的标题*/
+#side h2 {
+	height: 40px;
+	line-height: 40px;
+}
+/*热门专题*/
+#side #hottopic h2 {
+	padding-left: 17px;
+}
+#side #hottopic {
+	border: 1px solid #CCC;
+	margin-bottom: 14px;
+}
+/*热卖排行榜*/
+#side #hotbuy {
+	padding-left: 17px;
+	border: 1px solid #CCC;
+	padding-right: 17px;
+	margin-bottom: 14px; /*和下个专题的垂直间隔*/
+}
+#side #hotbuy dl {
+	border-bottom: 1px dashed #ccc;
+	margin-bottom: 11px;  /*每个商品垂直的间距*/
+}
+#side #hotbuy dl.last {
+	border: none;  /*最后一个热门商品没有下边框*/
+}
+#hotbuy dd {
+	line-height: 24px;  /*文字垂直间隔*/
+}
+#hotbuy dd span {
+	font: bold 20px Verdana, Geneva, sans-serif;
+	color: orange;
+}
+/*0元抽奖*/
+#side #price {
+	
+	background-image: url(../images/pricebg.JPG);
+	height: 86px;    /*156-70*/
+    padding-top:70px;
+	padding-left:70px;
+	margin-bottom: 14px;
+}
+
+#side #price a {
+	color: red;
+}
+#side #price a:hover {
+	text-decoration: underline;
+}
+
+#price ul{
+		   height:66px;
+		   overflow:hidden;
+		   	      
+}
+#price ul li{
+              line-height:22px;
+			  height:22px;
+}
+
+/*最近浏览*/
+#side #lastview{
+	border: 1px solid #CCC;
+	padding-left: 17px;
+	padding-right:17px;
+}
+#side #lastview h2{ float:left; 
+                    
+}
+/*清空*/
+#side #lastview p{float:right;
+                  height:40px;
+				  line-height:40px; /*和标题垂直对齐*/
+}
+#lastview dl{
+	clear:both;
+	border-bottom:1px dashed #ccc;
+	width:200px;
+	height:70px;
+	margin-bottom:11px; /*每个浏览过的商品垂直间隔*/
+}
+#lastview dl dt{
+	             float:left;
+			     margin-right:10px; /*图片和文字水平间隔*/	 
+}
+#lastview dl dd{
+	              height:25px;
+				  line-height:25px;
+}
+#lastview dl dd span.discount{
+	 color:orange;
+	 font:bold 14px Verdana, Geneva, sans-serif;
+}
+#lastview dl dd span.previous{
+	text-decoration:line-through;
+}
+#lastview dl.noborder{
+	                  border:none;
+}
+/*不随滚动条移动的美淘广告*/
+div#adv {
+	position:absolute;
+	top: 300px;
+	right: 0px;
+}

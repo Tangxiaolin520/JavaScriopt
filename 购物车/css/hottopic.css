@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+#head{
+	width:1440px;
+	height:70px;
+	background-color:#999;
+	
+}
+#head ul {
+	       width:1014px;
+		   margin:0px auto;
+		   
+}
+#head ul li{
+	float:left;
+	height:70px;
+	line-height:70px;
+}
+#head ul li a{
+	display:block;
+	height:70px;
+	padding:0px 10px;
+	color:#FFF;
+	font:bold 15px/70px Verdana, Geneva, sans-serif;
+	float:left;
+}
+#head ul li.login{
+	 color:#fff;
+	 margin-left:80px;
+}
+#head ul li.login a{
+     float:right;
+	font:bold 12px/70px Verdana, Geneva, sans-serif;
+	padding:0px;
+	color:#F90;
+}
+#head ul li a.current{
+	background-color:#666;
+}
+
+
+#head ul li.login a:hover{
+	background-color:transparent;
+	text-decoration:underline;
+}
+#hotel{
+	     width:1014px;
+		 margin:0px auto;
+		 clear:both; /*清除浮动的影响*/
+}
+/*酒店类型的描述*/
+#hotel h2{
+	      background-image:url(../images/topic/ztbg.jpg);
+		  background-repeat:no-repeat;
+		  height:51px;
+		  color:white;
+		  line-height:51px;
+		  padding-left:45px;  /*左填充*/
+		
+		  
+          }
+	
+/*代表每个酒店的dl*/		  
+#hotel dl{
+	        width:310px;
+			height:275px;
+			border:1px solid #ccc;
+			padding:8px;
+			margin-bottom:10px;
+			float:left;
+			margin-right:9px;
+}
+#hotel div{
+	         overflow:hidden;  /*子元素是浮动的，父元素高度是0，浮动塌陷*/
+}
+#hotel dl dd.name{
+	font:bold 15px Verdana, Geneva, sans-serif;
+	padding-top:5px;   /*名称和图片之间的间隔*/
+	
+}
+#hotel dl dd{
+	line-height:25px;
+	
+}
+#hotel dl dd span{
+	 color:orange;
+	 font:bold 16px Verdana, Geneva, sans-serif;
+}
+#hotel dl dd.price{float:left;
+                   width:200px;
+}
+#hotel dl dd.number{
+	              float:right;
+}
+
+/*分类列表*/
+#list{
+	   width:120px;
+	   background-color:#ccc;
+	   position:absolute;
+	   top:200px;
+	   right:0px;
+}
+#list ul li{
+	height:45px;
+	line-height:45px;
+	border-bottom:1px solid orange;
+	text-align:center;
+}
+#list ul li.title{
+	background-color:orange;
+}
